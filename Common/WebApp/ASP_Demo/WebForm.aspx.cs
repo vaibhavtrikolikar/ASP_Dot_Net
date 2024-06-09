@@ -11,14 +11,16 @@ namespace ASP_Demo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void BulletedList1_Click(object sender, BulletedListEventArgs e)
         {
-            Response.Write("Text: " +ListBox1.SelectedItem.Text + "<br>");
-            Response.Write("Value: "+ListBox1.SelectedItem.Value + "<br>");
-            Response.Write("Index: "+ListBox1.SelectedIndex.ToString());
+            ListItem item= BulletedList1.Items[e.Index];
+
+            Response.Write("Text " + item.Text +"<br/>");
+            Response.Write("Value " + item.Value +"<br/>");
+            Response.Write("Index " + e.Index +"<br/>");
         }
     }
 }

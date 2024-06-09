@@ -8,17 +8,12 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:ListBox ID="ListBox1" runat="server">
-                <asp:ListItem Text="Diploma" Value="0"></asp:ListItem>
-                <asp:ListItem Text="Gratuate" Value="1"></asp:ListItem>
-                <asp:ListItem Text="Post Gratuate" Value="2"></asp:ListItem>
-                <asp:ListItem Text="Doctrate" Value="3"></asp:ListItem>
-            </asp:ListBox>
-            <br />
-            <br />
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
-        </div>
+        <asp:BulletedList ID="BulletedList1" runat="server" OnClick="BulletedList1_Click" DisplayMode="LinkButton">
+            <asp:ListItem Text="Google" Value="1"></asp:ListItem>
+            <asp:ListItem Text="Microsoft" Value="2"></asp:ListItem>
+            <asp:ListItem Text="Dell" Value="3"></asp:ListItem>
+            <asp:ListItem Text="IBM" Value="4"></asp:ListItem>
+        </asp:BulletedList>
     </form>
 </body>
 </html>
