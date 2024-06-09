@@ -16,15 +16,9 @@ namespace ASP_Demo
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            foreach (ListItem li in CheckBoxList1.Items)
-            {
-                if (li.Selected)
-                {
-                    Response.Write("Text :" + li.Text + " ");
-                    Response.Write("Value :" + li.Value + " ");
-                    Response.Write("Index :" + CheckBoxList1.Items.IndexOf(li).ToString() + "<br/>");
-                }
-            }
+            Response.Write("Text: " +ListBox1.SelectedItem.Text + "<br>");
+            Response.Write("Value: "+ListBox1.SelectedItem.Value + "<br>");
+            Response.Write("Index: "+ListBox1.SelectedIndex.ToString());
         }
     }
 }

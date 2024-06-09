@@ -9,14 +9,15 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:CheckBoxList ID="CheckBoxList1" runat="server" RepeatDirection="Horizontal">
+            <asp:ListBox ID="ListBox1" runat="server">
                 <asp:ListItem Text="Diploma" Value="0"></asp:ListItem>
                 <asp:ListItem Text="Gratuate" Value="1"></asp:ListItem>
                 <asp:ListItem Text="Post Gratuate" Value="2"></asp:ListItem>
                 <asp:ListItem Text="Doctrate" Value="3"></asp:ListItem>
-            </asp:CheckBoxList>
+            </asp:ListBox>
             <br />
-            <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />
+            <br />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
         </div>
     </form>
 </body>
