@@ -8,12 +8,27 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:BulletedList ID="BulletedList1" runat="server" OnClick="BulletedList1_Click" DisplayMode="LinkButton">
-            <asp:ListItem Text="Google" Value="1"></asp:ListItem>
-            <asp:ListItem Text="Microsoft" Value="2"></asp:ListItem>
-            <asp:ListItem Text="Dell" Value="3"></asp:ListItem>
-            <asp:ListItem Text="IBM" Value="4"></asp:ListItem>
+        <asp:DropDownList ID="DropDownList1" runat="server">
+            
+        </asp:DropDownList>
+        <br />
+        <asp:CheckBoxList ID="CheckBoxList1" runat="server" RepeatDirection="Horizontal">
+            
+        </asp:CheckBoxList>
+        <br />
+        <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal">
+            
+        </asp:RadioButtonList>
+        <br />
+        <asp:ListBox ID="ListBox1" runat="server" Width="149px" SelectionMode="Multiple">
+            
+        </asp:ListBox>
+        <br />
+        <asp:BulletedList ID="BulletedList1" runat="server">
+            
         </asp:BulletedList>
+
+        <asp:Button Text="Submit" runat="server" OnClick="Submit_Click" />
     </form>
 </body>
 </html>
