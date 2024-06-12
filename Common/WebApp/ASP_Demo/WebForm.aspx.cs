@@ -11,43 +11,38 @@ namespace ASP_Demo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Hide Calendar for initial get request
             if (!IsPostBack)
             {
-                BindListItems(DropDownList1);
-                BindListItems(CheckBoxList1);
-                BindListItems(RadioButtonList1);
-                BindListItems(ListBox1);
-                BindListItems(BulletedList1);
+                Calendar1.Visible = false;
             }
         }
 
-        private void BindListItems(ListControl listControl)
+        /// <summary>
+        /// When we click button it will display calendar and when click again it will hide
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
-            ListItem listItem1 = new ListItem("Item1","1");
-            ListItem listItem2 = new ListItem("Item2","2");
-            ListItem listItem3 = new ListItem("Item3","3");
-            ListItem listItem4 = new ListItem("Item4","4");
-
-            listControl.Items.Add(listItem1);
-            listControl.Items.Add(listItem2);
-            listControl.Items.Add(listItem3);
-            listControl.Items.Add(listItem4);
-        }
-
-        private void GetSelectedText(ListControl listControl)
-        {
-            foreach (ListItem li in listControl.Items)
+            if (Calendar1.Visible)
             {
-                if (li.Selected)
-                {
-                    Response.Write("Text = " +li.Text + " Value = " + li.Value + " Index = " + listControl.Items.IndexOf(li) + "<br>");
-                }
+                Calendar1.Visible = false;
             }
+            else {
+                Calendar1.Visible = true;
+            }            
         }
 
-        protected void Submit_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Used to Set selected date to textbox control
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Calendar1_SelectionChanged(object sender, EventArgs e)
         {
-            GetSelectedText(ListBox1);  //Here You can pass other control which You want details
+            TextBox1.Text = Calendar1.SelectedDate.ToShortDateString();
+            Calendar1.Visible = false;
         }
     }
 }

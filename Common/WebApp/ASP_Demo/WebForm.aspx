@@ -8,27 +8,22 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:DropDownList ID="DropDownList1" runat="server">
-            
-        </asp:DropDownList>
+        
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        &nbsp;
+        <asp:ImageButton ID="ImageButton1" runat="server" Height="25px" ImageUrl="~/Images/calendar.png" Width="36px" OnClick="ImageButton1_Click" />
         <br />
-        <asp:CheckBoxList ID="CheckBoxList1" runat="server" RepeatDirection="Horizontal">
-            
-        </asp:CheckBoxList>
-        <br />
-        <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal">
-            
-        </asp:RadioButtonList>
-        <br />
-        <asp:ListBox ID="ListBox1" runat="server" Width="149px" SelectionMode="Multiple">
-            
-        </asp:ListBox>
-        <br />
-        <asp:BulletedList ID="BulletedList1" runat="server">
-            
-        </asp:BulletedList>
-
-        <asp:Button Text="Submit" runat="server" OnClick="Submit_Click" />
+        <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="#3366CC" BorderWidth="1px" CellPadding="1" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="#003399" Height="200px" Width="220px" OnSelectionChanged="Calendar1_SelectionChanged">
+            <DayHeaderStyle BackColor="#99CCCC" ForeColor="#336666" Height="1px" />
+            <NextPrevStyle Font-Size="8pt" ForeColor="#CCCCFF" />
+            <OtherMonthDayStyle ForeColor="#999999" />
+            <SelectedDayStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
+            <SelectorStyle BackColor="#99CCCC" ForeColor="#336666" />
+            <TitleStyle BackColor="#003399" BorderColor="#3366CC" BorderWidth="1px" Font-Bold="True" Font-Size="10pt" ForeColor="#CCCCFF" Height="25px" />
+            <TodayDayStyle BackColor="#99CCCC" ForeColor="White" />
+            <WeekendDayStyle BackColor="#CCCCFF" />
+        </asp:Calendar>
+        
     </form>
 </body>
 </html>
