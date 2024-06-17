@@ -8,29 +8,17 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:HiddenField ID="HiddenField1" runat="server" />
-        <table>
-            <tr>
-                <td>Name:</td>
-                <td>
-                    <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td>Gender:</td>
-                <td>
-                    <asp:TextBox ID="txtGender" runat="server"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td>Department:</td>
-                <td>
-                    <asp:TextBox ID="txtDept" runat="server"></asp:TextBox>
-                </td>
-            </tr>
-        </table>
-        <asp:Button ID="Button1" runat="server" Text="Update Employee" OnClick="Button1_Click" />&nbsp;
-        <asp:Button ID="Button2" runat="server" Text="Load Employee" OnClick="Button2_Click" />
+
+        <strong>Enter User Name:&nbsp;
+        <asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>
+            <br />
+            <br />
+            <asp:Button ID="btnClear" runat="server" Text="Clear" OnClick="btnClear_Click" UseSubmitBehavior="False" />
+            &nbsp;&nbsp;&nbsp;
+            <asp:Button ID="btnSubmt" runat="server" Text="Submit" OnClick="btnSubmt_Click" />
+            <br />
+            <asp:Label ID="lblMessage" runat="server"></asp:Label>
+        </strong>
     </form>
 </body>
 </html>
