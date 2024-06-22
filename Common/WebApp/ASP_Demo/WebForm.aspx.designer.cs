@@ -24,156 +24,84 @@ namespace ASP_Demo
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// DropDownList1 control.
+        /// chkBoxListControlType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.CheckBoxList chkBoxListControlType;
 
         /// <summary>
-        /// AdminPanel control.
+        /// txtControlsCount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel AdminPanel;
+        protected global::System.Web.UI.WebControls.TextBox txtControlsCount;
 
         /// <summary>
-        /// AdminGreeting control.
+        /// btnGenerateControl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label AdminGreeting;
+        protected global::System.Web.UI.WebControls.Button btnGenerateControl;
 
         /// <summary>
-        /// AdminNameLabel control.
+        /// tdLabels control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label AdminNameLabel;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell tdLabels;
 
         /// <summary>
-        /// AdminNameTextBox control.
+        /// pnlLabels control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AdminNameTextBox;
+        protected global::System.Web.UI.WebControls.Panel pnlLabels;
 
         /// <summary>
-        /// AdminRegionLabel control.
+        /// tdTextBoxes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label AdminRegionLabel;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell tdTextBoxes;
 
         /// <summary>
-        /// AdminRegionTextBox control.
+        /// pnlTextBoxes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AdminRegionTextBox;
+        protected global::System.Web.UI.WebControls.Panel pnlTextBoxes;
 
         /// <summary>
-        /// AdminActionsLabel control.
+        /// tdButtons control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label AdminActionsLabel;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell tdButtons;
 
         /// <summary>
-        /// AdminActionsTextBox control.
+        /// pnlButtons control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AdminActionsTextBox;
-
-        /// <summary>
-        /// NonAdminPanel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel NonAdminPanel;
-
-        /// <summary>
-        /// NonAdminGreeting control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label NonAdminGreeting;
-
-        /// <summary>
-        /// NonAdminNameLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label NonAdminNameLabel;
-
-        /// <summary>
-        /// NonAdminNameTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NonAdminNameTextBox;
-
-        /// <summary>
-        /// NonAdminRegionLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label NonAdminRegionLabel;
-
-        /// <summary>
-        /// NonAdminRegionTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NonAdminRegionTextBox;
-
-        /// <summary>
-        /// NonAdminCityLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label NonAdminCityLabel;
-
-        /// <summary>
-        /// NonAdminCityTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NonAdminCityTextBox;
+        protected global::System.Web.UI.WebControls.Panel pnlButtons;
     }
 }

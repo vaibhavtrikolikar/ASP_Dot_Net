@@ -8,95 +8,63 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="true"
-            OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
-            <asp:ListItem Text="Select User" Value="-1"></asp:ListItem>
-            <asp:ListItem Text="Admin" Value="Admin"></asp:ListItem>
-            <asp:ListItem Text="Non-Admin" Value="Non-Admin"></asp:ListItem>
-        </asp:DropDownList>
-        <asp:Panel ID="AdminPanel" runat="server">
+        <div style="font-family: Arial">
             <table>
                 <tr>
-                    <td colspan="2">
-                        <asp:Label ID="AdminGreeting" runat="server" Font-Size="XX-Large"
-                            Text="You are logged in as an administrator">
-                        </asp:Label>
+                    <td><b>Control Type</b></td>
+                    <td>
+                        <asp:CheckBoxList ID="chkBoxListControlType" runat="server" RepeatDirection="Horizontal">
+                            <asp:ListItem Text="Label" Value="Label"></asp:ListItem>
+                            <asp:ListItem Text="TextBox" Value="TextBox"></asp:ListItem>
+                            <asp:ListItem Text="Button" Value="Button"></asp:ListItem>
+                        </asp:CheckBoxList>
+                    </td>
+                    <td><b>How Many</b></td>
+                    <td>
+                        <asp:TextBox ID="txtControlsCount" runat="server" Width="40px"></asp:TextBox>
+                    </td>
+                    <td>
+                        <asp:Button ID="btnGenerateControl" runat="server" Text="Generate Controls"
+                            OnClick="btnGenerateControl_Click" />
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        <asp:Label ID="AdminNameLabel" runat="server" Text="Admin Name:">
-                        </asp:Label>
-                    </td>
-                    <td>
-                        <asp:TextBox ID="AdminNameTextBox" runat="server" Text="Tom">
-                        </asp:TextBox>
+                    <td colspan="5">
+                        <h3>Label Controls</h3>
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        <asp:Label ID="AdminRegionLabel" runat="server" Text="Admin Region:">
-                        </asp:Label>
-                    </td>
-                    <td>
-                        <asp:TextBox ID="AdminRegionTextBox" runat="server" Text="Asia">
-                        </asp:TextBox>
+                    <td colspan="5" id="tdLabels" runat="server">
+                        <asp:Panel ID="pnlLabels" runat="server">
+                        </asp:Panel>
+                       
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        <asp:Label ID="AdminActionsLabel" runat="server" Text="Actions:">
-                        </asp:Label>
+                    <td colspan="5">
+                        <h3>TextBox Controls</h3>
                     </td>
-                    <td>
-                        <asp:TextBox ID="AdminActionsTextBox" runat="server" Font-Size="Medium" TextMode="MultiLine"
-                            Text="There are 4 user queries to be answered by the end of Dcemeber 25th 2013."
-                            Font-Bold="True"></asp:TextBox>
+                </tr>
+                <tr>
+                    <td colspan="5" id="tdTextBoxes" runat="server">
+                        <asp:Panel ID="pnlTextBoxes" runat="server">
+                        </asp:Panel>
+                       
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <h3>Button Controls</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5" id="tdButtons" runat="server">
+                        <asp:Panel ID="pnlButtons" runat="server">
+                        </asp:Panel>                      
                     </td>
                 </tr>
             </table>
-        </asp:Panel>
-        <asp:Panel ID="NonAdminPanel" runat="server">
-            <table>
-                <tr>
-                    <td colspan="2">
-                        <asp:Label ID="NonAdminGreeting" runat="server" Font-Size="XX-Large"
-                            Text="Welcome Tom!">
-                        </asp:Label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:Label ID="NonAdminNameLabel" runat="server" Text="User Name:">
-                        </asp:Label>
-                    </td>
-                    <td>
-                        <asp:TextBox ID="NonAdminNameTextBox" runat="server" Text="Mike">
-                        </asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:Label ID="NonAdminRegionLabel" runat="server" Text="User Region:">
-                        </asp:Label>
-                    </td>
-                    <td>
-                        <asp:TextBox ID="NonAdminRegionTextBox" runat="server" Text="United Kingdom">
-                        </asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:Label ID="NonAdminCityLabel" runat="server" Text="City:">
-                        </asp:Label>
-                    </td>
-                    <td>
-                        <asp:TextBox ID="NonAdminCityTextBox" runat="server" Text="London">
-                        </asp:TextBox>
-                    </td>
-                </tr>
-            </table>
-        </asp:Panel>
+        </div>
     </form>
 </body>
 </html>
