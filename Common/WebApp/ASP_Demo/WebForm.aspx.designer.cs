@@ -24,31 +24,31 @@ namespace ASP_Demo
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// txtAge control.
+        /// txtPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAge;
+        protected global::System.Web.UI.WebControls.TextBox txtPassword;
 
         /// <summary>
-        /// RangeValidatorAge control.
+        /// txtRetypePassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator RangeValidatorAge;
+        protected global::System.Web.UI.WebControls.TextBox txtRetypePassword;
 
         /// <summary>
-        /// RequiredFieldValidatorAge control.
+        /// CompareValidatorPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorAge;
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidatorPassword;
 
         /// <summary>
         /// btnSave control.
