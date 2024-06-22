@@ -8,63 +8,41 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div style="font-family: Arial">
-            <table>
-                <tr>
-                    <td><b>Control Type</b></td>
-                    <td>
-                        <asp:CheckBoxList ID="chkBoxListControlType" runat="server" RepeatDirection="Horizontal">
-                            <asp:ListItem Text="Label" Value="Label"></asp:ListItem>
-                            <asp:ListItem Text="TextBox" Value="TextBox"></asp:ListItem>
-                            <asp:ListItem Text="Button" Value="Button"></asp:ListItem>
-                        </asp:CheckBoxList>
-                    </td>
-                    <td><b>How Many</b></td>
-                    <td>
-                        <asp:TextBox ID="txtControlsCount" runat="server" Width="40px"></asp:TextBox>
-                    </td>
-                    <td>
-                        <asp:Button ID="btnGenerateControl" runat="server" Text="Generate Controls"
-                            OnClick="btnGenerateControl_Click" />
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="5">
-                        <h3>Label Controls</h3>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="5" id="tdLabels" runat="server">
-                        <asp:Panel ID="pnlLabels" runat="server">
-                        </asp:Panel>
-                       
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="5">
-                        <h3>TextBox Controls</h3>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="5" id="tdTextBoxes" runat="server">
-                        <asp:Panel ID="pnlTextBoxes" runat="server">
-                        </asp:Panel>
-                       
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="5">
-                        <h3>Button Controls</h3>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="5" id="tdButtons" runat="server">
-                        <asp:Panel ID="pnlButtons" runat="server">
-                        </asp:Panel>                      
-                    </td>
-                </tr>
-            </table>
-        </div>
+        <table>
+            <tr>
+                <td>
+                    <b>Age</b>
+                </td>
+                <td>:<asp:TextBox ID="txtAge" runat="server" Width="150px">
+                </asp:TextBox>
+                    <asp:RangeValidator ID="RangeValidatorAge" runat="server"
+                        ErrorMessage="Age must be between 1 & 100"
+                        MinimumValue="1" MaximumValue="100"
+                        ControlToValidate="txtAge" Type="Integer"
+                        ForeColor="Red" Display="Dynamic">
+                    </asp:RangeValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorAge"
+                        runat="server" ErrorMessage="Age is required"
+                        ControlToValidate="txtAge" ForeColor="Red"
+                        Display="Dynamic">
+                    </asp:RequiredFieldValidator>
+                </td>
+            </tr>
+            <tr>              
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <asp:Button ID="btnSave" runat="server" Text="Save" Width="100px"
+                        OnClick="btnSave_Click" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <asp:Label ID="lblStatus" runat="server" Font-Bold="true">
+                    </asp:Label>
+                </td>
+            </tr>
+        </table>
     </form>
 </body>
 </html>
