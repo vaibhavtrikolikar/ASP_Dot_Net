@@ -17,15 +17,38 @@ namespace ASP_Demo
 
         }
 
-        protected void btnSave_Click(object sender, EventArgs e)
+        protected void btnSubmit_Click(object sender, EventArgs e)
         {
             if (Page.IsValid)
             {
-                lblStatus.Text = "Data has been Submitted";
-                lblStatus.ForeColor = System.Drawing.Color.Green;
+                lblMessage.Text = "Data Saved";
+                lblMessage.ForeColor = System.Drawing.Color.Green;
             }
-            else {
-                lblStatus.ForeColor = System.Drawing.Color.Red;
+            else
+            {
+                lblMessage.Text = "Data Not Saved";
+                lblMessage.ForeColor = System.Drawing.Color.Red;
+            }
+        }
+
+        protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            if (args.Value == "")
+            {
+                args.IsValid = false;
+            }
+            else
+            {
+                int Number;
+                bool isNumber = int.TryParse(args.Value, out Number);
+                if (isNumber && Number % 2 == 0)
+                {
+                    args.IsValid = true;
+                }
+                else
+                {
+                    args.IsValid = false;
+                }
             }
         }
     }
