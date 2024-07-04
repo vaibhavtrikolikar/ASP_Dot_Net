@@ -13,6 +13,8 @@ namespace ASP_Demo
 
         protected void Application_Start(object sender, EventArgs e)
         {
+            Application["UserOnline"] = 0;
+
             ScriptManager.ScriptResourceMapping.AddDefinition(
            "jquery",
            new ScriptResourceDefinition
@@ -29,32 +31,24 @@ namespace ASP_Demo
 
         protected void Session_Start(object sender, EventArgs e)
         {
-
-        }
-
-        protected void Application_BeginRequest(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Application_AuthenticateRequest(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Application_Error(object sender, EventArgs e)
-        {
-
+            Application["UserOnline"] = (int)Application["UserOnline"] + 1 ;
         }
 
         protected void Session_End(object sender, EventArgs e)
         {
-
-        }
+            Application["UserOnline"] = (int)Application["UserOnline"] - 1;
+        }          
 
         protected void Application_End(object sender, EventArgs e)
         {
 
+        }
+        protected void Application_Error(object sender, EventArgs e)
+        {
+            // Get the exception details and log it in the database or event viewer
+            Exception ex = Server.GetLastError();
+            Server.ClearError();  // Clear the exception
+            Response.Redirect("Errors.aspx"); //Redirect user to Error page
         }
     }
 }

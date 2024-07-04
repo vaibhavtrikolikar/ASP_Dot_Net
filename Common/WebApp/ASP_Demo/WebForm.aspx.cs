@@ -7,6 +7,7 @@ using System.Management.Instrumentation;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
 namespace ASP_Demo
 {
@@ -14,15 +15,18 @@ namespace ASP_Demo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            { 
-            }
+				DataSet ds = new DataSet(); ;
+				ds.ReadXml(Server.MapPath("~/XMLFile1.xml"));
+				GridView1.DataSource = ds;
+				GridView1.DataBind();			
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
+        protected void Page_Error(object sender, EventArgs e)
         {
-            Session["Name"] = txtName.Text;
-            Session["Email"] = txtEmail.Text;
-            Response.Redirect("~/WebForm2.aspx");
+            // Get the exception details and log it in the database or event viewer
+            Exception ex = Server.GetLastError();
+            Server.ClearError();  // Clear the exception
+            Response.Redirect("~/ErrorPage.aspx"); //Redirect user to Error page
         }
     }
 }
